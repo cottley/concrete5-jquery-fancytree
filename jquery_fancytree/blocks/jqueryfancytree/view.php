@@ -24,8 +24,10 @@ if (!$isEditMode) {
 
 			},
 			activate: function(e, data) {
-        if( data.url )
-            window.open(data.url);
+        var node = data.node;
+        if ( node.data.url ) {
+          window.open(node.data.url);
+        }
 			}
 		});  
     
